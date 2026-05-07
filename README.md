@@ -1,73 +1,78 @@
-# React + TypeScript + Vite
+ConceptEasier 🧠✨
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ConceptEasier is a React-based educational platform designed to bridge the gap between abstract theory and visual intuition. By leveraging Generative AI, it transforms natural language descriptions into interactive, high-fidelity visualizations for Mathematics and Computer Science algorithms.
+🌟 Key Features
 
-Currently, two official plugins are available:
+    AI-Powered Visualization: Integrated with the Anthropic Claude API (Opus/Sonnet) to interpret complex prompts and generate dynamic visual instructions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+    Generic Rendering Engine: A custom-built engine that renders a "Dynamic Instruction Schema" (DIS) using Framer Motion v12 for physics-based, fluid transitions.
 
-## React Compiler
+    DSA Suite: Built-in support for visualizing Sorting (Merge, Quick, Bubble), Tree structures (BST, Heaps), and Graphs (Dijkstra, BFS/DFS).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+    Mathematical Playground: Interactive modules for Calculus (Fourier Series), Linear Algebra (Vector Transformations), and ML concepts (Gradient Descent).
 
-## Expanding the ESLint configuration
+    Minimalist Aesthetic: A high-contrast, monochrome design language with "Warm White" backgrounds to reduce cognitive load and enhance focus.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🚀 Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+    Core: React 18 + TypeScript + Vite
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+    Styling: Tailwind CSS
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+    Animation: Framer Motion v12 (Layout-based animations)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+    AI Engine: Claude-3.5-Sonnet / Claude-3-Opus via Anthropic SDK
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+    Visualization: SVG & HTML5 Canvas
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🛠 Installation & Setup
+
+To get a local copy up and running, follow these steps:
+
+    Clone the Repository
+    Bash
+
+    git clone https://github.com/vubui208/ConceptEasier.git
+    cd ConceptEasier
+
+    Install Dependencies
+    Bash
+
+    npm install
+
+    Run Development Server
+    Bash
+
+    npm run dev
+
+    Access the app at http://localhost:5173.
+
+    Configure API Key
+    Open the application and paste your Anthropic API Key into the API Settings panel on the right rail. This allows the app to process natural language commands.
+
+📖 How It Works
+
+    User Input: You enter a command like "Visualize a stack pushing three items: 10, 20, and 30."
+
+    LLM Interpreter: The app sends this to Claude with a structured JSON schema (DIS).
+
+    DIS Generation: The AI returns a sequence of visual steps (e.g., draw_rect, translate_y).
+
+    Generic Renderer: The React engine interprets the JSON and uses Framer Motion to animate the elements on the canvas.
+
+🗺 Roadmap
+
+    [ ] Dynamic Programming Module: Visualize 2D matrices for LCS and Knapsack problems.
+
+    [ ] Export Options: Save current visualizations as high-quality SVGs or animated GIFs.
+
+    [ ] Offline Mode: Enhanced mock fallback for common algorithms when no API key is present.
+
+    [ ] Community Presets: Shareable links for specific visualization states.
+
+📄 License
+
+Distributed under the MIT License. See LICENSE for more information.
+
+ConceptEasier — Making the abstract, intuitive.
+Developed by Vu Bui (Phi Vu P Bui) • CS at The University of Texas at Dallas.
