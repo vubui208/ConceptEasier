@@ -50,25 +50,7 @@ To get a local copy up and running, follow these steps:
     Configure API Key
     Open the application and paste your Anthropic API Key into the API Settings panel on the right rail. This allows the app to process natural language commands.
 
-📖 How It Works
 
-    User Input: You enter a command like "Visualize a stack pushing three items: 10, 20, and 30."
-
-    LLM Interpreter: The app sends this to Claude with a structured JSON schema (DIS).
-
-    DIS Generation: The AI returns a sequence of visual steps (e.g., draw_rect, translate_y).
-
-    Generic Renderer: The React engine interprets the JSON and uses Framer Motion to animate the elements on the canvas.
-
-🗺 Roadmap
-
-    [ ] Dynamic Programming Module: Visualize 2D matrices for LCS and Knapsack problems.
-
-    [ ] Export Options: Save current visualizations as high-quality SVGs or animated GIFs.
-
-    [ ] Offline Mode: Enhanced mock fallback for common algorithms when no API key is present.
-
-    [ ] Community Presets: Shareable links for specific visualization states.
 
 📄 License
 
